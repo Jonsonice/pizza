@@ -11,12 +11,12 @@ import Register from './components/Register'
 Vue.use(VueRouter)
 
 const routes = [
-	{path:'/',component:Home},
-	{path:'/menu',component:Menu},
-	{path:'/admin',component:Admin},
-	{path:'/about',component:About},
-	{path:'/login',component:Login},
-	{path:'/register',component:Register},
+	{path:'/',component:Home,name:"homelink"},
+	{path:'/menu',component:Menu,name:"menulink"},
+	{path:'/admin',component:Admin,name:"adminlink"},
+	{path:'/about',component:About,name:"aboutlink"},
+	{path:'/login',component:Login,name:"loginlink"},
+	{path:'/register',component:Register,name:"registerlink"},
 	{path:'*',redirect:'/'}
 ]
 
