@@ -16,25 +16,25 @@
 			<a href="/" class="navbar-brand">Pizza点餐系统</a>
 			<ul class="navbar-nav">
 				<li>
-					<a href="#" class="nav-link">主页</a>
+					<router-link to="/" class="nav-link">主页</router-link>
 				</li>
 				<li>
-					<a href="#" class="nav-link">菜单</a>
+					<router-link to="menu" class="nav-link">菜单</router-link>
 				</li>
 				<li>
-					<a href="#" class="nav-link">管理</a>
+					<router-link to="admin" class="nav-link">管理</router-link>
 				</li>
 				<li>
-					<a href="#" class="nav-link">关于我们</a>
+					<router-link to="about" class="nav-link">关于我们</router-link>
 				</li>
 			</ul>
 			
 			<ul class="navbar-nav ml-auto">
 				<li>
-					<a href="#" class="nav-link">登录</a>
+					<router-link to="login" class="nav-link">登录</router-link>
 				</li>
 				<li>
-					<a href="#" class="nav-link">注册</a>
+					<router-link to="register" class="nav-link">注册</router-link>
 				</li>
 			</ul>
 		</nav>
