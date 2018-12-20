@@ -16,7 +16,8 @@ const routes = [
 	{path:'/admin',component:Admin},
 	{path:'/about',component:About},
 	{path:'/login',component:Login},
-	{path:'/register',component:Register}
+	{path:'/register',component:Register},
+	{path:'*',redirect:'/'}
 ]
 
 const router = new VueRouter({

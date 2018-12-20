@@ -15,8 +15,17 @@
 			</a>
 			<a href="/" class="navbar-brand">Pizza点餐系统</a>
 			<ul class="navbar-nav">
+				<!-- <li>
+					<router-link to="/homeLink" class="nav-link" tag="div">主页</router-link>
+				</li> -->
+				<!-- router-link a标签变其他标签 tag="div" -->
+				<!-- <li>
+					<router-link :to="homeLink" class="nav-link">主页</router-link>
+					
+				</li> -->
 				<li>
-					<router-link to="/" class="nav-link">主页</router-link>
+					<router-link to="homeLink" class="nav-link">主页</router-link>
+					
 				</li>
 				<li>
 					<router-link to="menu" class="nav-link">菜单</router-link>
@@ -40,3 +49,13 @@
 		</nav>
 	</header>
 </template>
+<script>
+	export default{
+		data(){
+			return{
+				homeLink:'/'
+				// 属性跳转
+			}
+		}
+	}
+</script>
