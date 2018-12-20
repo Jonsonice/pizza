@@ -23,7 +23,20 @@ Vue.use(VueRouter)
 const routes = [
 	{path:'/',component:Home,name:"homelink"},
 	{path:'/menu',component:Menu,name:"menulink"},
-	{path:'/admin',component:Admin,name:"adminlink"},
+	{path:'/admin',component:Admin,name:"adminlink",
+					// ,beforeEnter: (to, from, next) => {
+//         alert("非登录状态，不能访问此页面！");
+// 				next('')
+				//路由独享的守卫
+				//判断store.gettes.isLogin ===false
+// 				if(to.path == '/login' || to.path == '/register'){
+// 					next();
+// 				}else{
+// 					alert("还未登录，请先登录！");
+// 					next('/login')
+// 				}
+      // }
+			},
 	{path:'/about',component:About,name:"aboutlink",redirect:'/about/history',children:[
 		{path:'/about/contact',name:'contactLink',component:Contact,redirect:'/personname',children:[
 			{path:'/phone',name:'phoneLink',component:Phone},
@@ -45,20 +58,26 @@ const router = new VueRouter({
 })
 
 //全局守卫
-router.beforeEach((to,from,next)=>{
-// 	alert("还未登录，请先登录！");
-// 	next();
-// console.log(to);
+// router.beforeEach((to,from,next)=>{
+// // 	alert("还未登录，请先登录！");
+// // 	next();
+// // console.log(to);
+// 
+// 
+// //判断store.gettes.isLogin ===false
+// 	if(to.path == '/login' || to.path == '/register'){
+// 		next();
+// 	}else{
+// 		alert("还未登录，请先登录！");
+// 		next('/login')
+// 	}
+// })
 
+//后置钩子
+// router.afterEach((to,from)=>{
+// 	alert("after each");
+// })
 
-//判断store.gettes.isLogin ===false
-	if(to.path == '/login' || to.path == '/register'){
-		next();
-	}else{
-		alert("还未登录，请先登录！");
-		next('/login')
-	}
-})
 
 
 new Vue({
